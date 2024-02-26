@@ -23,13 +23,13 @@ public class Pauta {
     private String titulo;
     private String descricao;
     private UUID idAssociadoAutor;
-    private LocalDateTime dataDriacao;
+    private LocalDateTime dataCriacao;
 
     public Pauta(NovaPautaRequest novaPauta) {
         this.titulo = novaPauta.getTitulo();
         this.descricao = novaPauta.getDescricao();
         this.idAssociadoAutor = novaPauta.getIdAssociadoAutor();
-        this.dataDriacao = LocalDateTime.now();
+        this.dataCriacao = LocalDateTime.now();
     }
 
 }
