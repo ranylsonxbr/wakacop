@@ -1,6 +1,7 @@
 package academy.wakanda.wakacop.pauta.application.api;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -13,7 +14,7 @@ public class NovaPautaRequest {
     private String titulo;
     @NotBlank
     private String descricao;
-    @NotBlank
+    @NotNull
     private UUID idAssociadoAutor;
 
 }

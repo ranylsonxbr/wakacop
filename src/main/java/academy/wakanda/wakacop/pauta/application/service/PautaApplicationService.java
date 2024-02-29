@@ -1,7 +1,6 @@
 package academy.wakanda.wakacop.pauta.application.service;
 
 import academy.wakanda.wakacop.pauta.application.api.NovaPautaRequest;
-import academy.wakanda.wakacop.pauta.application.api.PautaAPI;
 import academy.wakanda.wakacop.pauta.application.api.PautaCadastradaResponse;
 import academy.wakanda.wakacop.pauta.application.repository.PautaRepository;
 import academy.wakanda.wakacop.pauta.domain.Pauta;
@@ -30,8 +29,8 @@ public class PautaApplicationService implements PautaService {
     @Override
     public Pauta getPautaPorId(UUID idPauta) {
         log.info("[start] PautaApplicationService - getPautaPorId");
-        Pauta pautaPorID = pautaRepository.buscaPautaPorID(idPauta);
+        Pauta pautaPorId = pautaRepository.buscaPautaPorID(idPauta);
         log.info("[finish] PautaApplicationService - getPautaPorId");
-        return pautaPorID;
+        return pautaPorId;
     }
 }
