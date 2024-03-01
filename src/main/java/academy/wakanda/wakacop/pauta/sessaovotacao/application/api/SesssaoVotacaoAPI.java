@@ -1,5 +1,6 @@
 package academy.wakanda.wakacop.pauta.sessaovotacao.application.api;
 
+import academy.wakanda.wakacop.pauta.sessaovotacao.api.ResultadoSessaoResponse;
 import academy.wakanda.wakacop.pauta.sessaovotacao.domain.VotoRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -18,4 +19,7 @@ public interface SesssaoVotacaoAPI {
     @ResponseStatus(HttpStatus.CREATED)
     VotoResponse recebeVoto(@PathVariable UUID idSessao, @RequestBody VotoRequest novoVoto);
 
+    @GetMapping("/{idSessao}/resultado")
+    @ResponseStatus(HttpStatus.OK)
+    ResultadoSessaoResponse obtemResultado(@PathVariable UUID idSessao);
 }

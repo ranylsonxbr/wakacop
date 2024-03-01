@@ -1,5 +1,6 @@
 package academy.wakanda.wakacop.pauta.sessaovotacao.application.api;
 
+import academy.wakanda.wakacop.pauta.sessaovotacao.api.ResultadoSessaoResponse;
 import academy.wakanda.wakacop.pauta.sessaovotacao.application.service.SessaoVotacaoService;
 import academy.wakanda.wakacop.pauta.sessaovotacao.domain.VotoRequest;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +31,14 @@ public class SesssaoVotacaoController implements SesssaoVotacaoAPI {
         VotoResponse votoResponse = sessaoVotacaoService.recebeVoto(idSessao,novoVoto);
         log.info("[finish] SesssaoVotacaoController - recebeVoto");
         return votoResponse;
+    }
+
+    @Override
+    public ResultadoSessaoResponse obtemResultado(UUID idSessao) {
+        log.info("[start] SesssaoVotacaoController - obtemResultado");
+        ResultadoSessaoResponse resultado = sessaoVotacaoService.obtemResultado(idSessao);
+        log.info("[finish] SesssaoVotacaoController - obtemResultado");
+        return resultado;
     }
 
 
