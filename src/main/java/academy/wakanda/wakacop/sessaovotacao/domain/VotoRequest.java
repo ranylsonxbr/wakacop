@@ -1,4 +1,4 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.domain;
+package academy.wakanda.wakacop.sessaovotacao.domain;
 
 import lombok.Getter;
 import lombok.ToString;

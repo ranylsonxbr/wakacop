@@ -1,4 +1,4 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.application.api;
+package academy.wakanda.wakacop.sessaovotacao.application.api;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

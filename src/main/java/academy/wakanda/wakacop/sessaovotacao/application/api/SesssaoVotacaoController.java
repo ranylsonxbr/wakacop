@@ -1,8 +1,7 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.application.api;
+package academy.wakanda.wakacop.sessaovotacao.application.api;
 
-import academy.wakanda.wakacop.pauta.sessaovotacao.api.ResultadoSessaoResponse;
-import academy.wakanda.wakacop.pauta.sessaovotacao.application.service.SessaoVotacaoService;
-import academy.wakanda.wakacop.pauta.sessaovotacao.domain.VotoRequest;
+import academy.wakanda.wakacop.sessaovotacao.application.service.SessaoVotacaoService;
+import academy.wakanda.wakacop.sessaovotacao.domain.VotoRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;

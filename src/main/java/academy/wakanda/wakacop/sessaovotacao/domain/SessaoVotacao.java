@@ -1,8 +1,9 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.domain;
+package academy.wakanda.wakacop.sessaovotacao.domain;
 
+import academy.wakanda.wakacop.associado.application.service.AssociadoService;
 import academy.wakanda.wakacop.pauta.domain.Pauta;
-import academy.wakanda.wakacop.pauta.sessaovotacao.api.ResultadoSessaoResponse;
-import academy.wakanda.wakacop.pauta.sessaovotacao.application.api.SessaoAberturaRequest;
+import academy.wakanda.wakacop.sessaovotacao.application.api.ResultadoSessaoResponse;
+import academy.wakanda.wakacop.sessaovotacao.application.api.SessaoAberturaRequest;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -46,9 +47,9 @@ public class SessaoVotacao {
         return new ResultadoSessaoResponse(this);
     }
 
-    public VotoPauta recebeVoto(VotoRequest votoRequest){
+    public VotoPauta recebeVoto(VotoRequest votoRequest, AssociadoService associadoService){
         validaSessaoAberta();
-        validaAssociado(votoRequest.getCpfAssociado());
+        validaAssociado(votoRequest.getCpfAssociado(),associadoService);
         VotoPauta voto = new VotoPauta(this,votoRequest);
         votos.put(votoRequest.getCpfAssociado(),voto);
         return voto;
@@ -73,10 +74,15 @@ public class SessaoVotacao {
         this.status = StatusSessaoVotacao.FECHADA;
     }
 
-    private void validaAssociado(String cpfAssociado) {
-      if (this.votos.containsKey(cpfAssociado)){
-          throw new RuntimeException("Associado ja votou nessa sessao");
-      }
+    private void validaAssociado(String cpfAssociado, AssociadoService associadoService) {
+        associadoService.validaAssociadoAptoVoto(cpfAssociado);
+        validaVotoDuplicado(cpfAssociado);
+    }
+
+    private void validaVotoDuplicado(String cpfAssociado) {
+        if (this.votos.containsKey(cpfAssociado)){
+            throw new RuntimeException("Associado ja votou nessa sessao");
+        }
     }
 
     public Long getTotalVotos() {

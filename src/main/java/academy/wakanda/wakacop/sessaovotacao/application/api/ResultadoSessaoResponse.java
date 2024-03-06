@@ -1,7 +1,7 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.api;
+package academy.wakanda.wakacop.sessaovotacao.application.api;
 
-import academy.wakanda.wakacop.pauta.sessaovotacao.domain.SessaoVotacao;
-import academy.wakanda.wakacop.pauta.sessaovotacao.domain.StatusSessaoVotacao;
+import academy.wakanda.wakacop.sessaovotacao.domain.SessaoVotacao;
+import academy.wakanda.wakacop.sessaovotacao.domain.StatusSessaoVotacao;
 import lombok.Getter;
 import lombok.ToString;
 

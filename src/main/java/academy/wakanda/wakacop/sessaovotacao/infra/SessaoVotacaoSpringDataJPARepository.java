@@ -1,6 +1,6 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.infra;
+package academy.wakanda.wakacop.sessaovotacao.infra;
 
-import academy.wakanda.wakacop.pauta.sessaovotacao.domain.SessaoVotacao;
+import academy.wakanda.wakacop.sessaovotacao.domain.SessaoVotacao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

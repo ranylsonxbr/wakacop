@@ -1,7 +1,7 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.infra;
+package academy.wakanda.wakacop.sessaovotacao.infra;
 
-import academy.wakanda.wakacop.pauta.sessaovotacao.application.service.SessaoVotacaoRepository;
-import academy.wakanda.wakacop.pauta.sessaovotacao.domain.SessaoVotacao;
+import academy.wakanda.wakacop.sessaovotacao.application.service.SessaoVotacaoRepository;
+import academy.wakanda.wakacop.sessaovotacao.domain.SessaoVotacao;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;

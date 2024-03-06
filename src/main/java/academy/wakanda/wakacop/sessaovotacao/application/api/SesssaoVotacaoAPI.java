@@ -1,7 +1,6 @@
-package academy.wakanda.wakacop.pauta.sessaovotacao.application.api;
+package academy.wakanda.wakacop.sessaovotacao.application.api;
 
-import academy.wakanda.wakacop.pauta.sessaovotacao.api.ResultadoSessaoResponse;
-import academy.wakanda.wakacop.pauta.sessaovotacao.domain.VotoRequest;
+import academy.wakanda.wakacop.sessaovotacao.domain.VotoRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
