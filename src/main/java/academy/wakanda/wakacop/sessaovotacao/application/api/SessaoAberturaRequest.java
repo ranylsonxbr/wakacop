@@ -1,6 +1,6 @@
 package academy.wakanda.wakacop.sessaovotacao.application.api;
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.ToString;
 

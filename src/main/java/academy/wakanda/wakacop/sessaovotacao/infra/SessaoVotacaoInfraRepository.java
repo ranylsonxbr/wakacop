@@ -18,18 +18,18 @@ public class SessaoVotacaoInfraRepository implements SessaoVotacaoRepository {
 
     @Override
     public SessaoVotacao salva(SessaoVotacao sessaoVotacao) {
-        log.info("[start] SessaoVotacaoInfraRepository - salva");
+        log.debug("[start] SessaoVotacaoInfraRepository - salva");
         sessaoVotacaoSpringDataJPARepository.save(sessaoVotacao);
-        log.info("[finish] SessaoVotacaoInfraRepository - salva");
+        log.debug("[finish] SessaoVotacaoInfraRepository - salva");
         return sessaoVotacao;
     }
 
     @Override
     public SessaoVotacao buscaPorId(UUID idSessao) {
-        log.info("[start] SessaoVotacaoInfraRepository - buscaPorId");
+        log.debug("[start] SessaoVotacaoInfraRepository - buscaPorId");
         SessaoVotacao sessao = sessaoVotacaoSpringDataJPARepository.findById(idSessao)
                 .orElseThrow(() -> new RuntimeException("Sessão não encontrada"));
-        log.info("[finish] SessaoVotacaoInfraRepository - buscaPorId");
+        log.debug("[finish] SessaoVotacaoInfraRepository - buscaPorId");
         return sessao;
     }
 }

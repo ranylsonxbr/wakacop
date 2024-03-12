@@ -1,7 +1,7 @@
 package academy.wakanda.wakacop.pauta.domain;
 
 import academy.wakanda.wakacop.pauta.application.api.NovaPautaRequest;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
